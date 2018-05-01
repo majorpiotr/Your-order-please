@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	
+function order(words)
+{
+wordArray = words.split(' ');
+
+var resoult=[];
+var resoult_out = "";
+	for (var i = 0, len = wordArray.length; i < len; i++) {
+
+an=wordArray[i].replace(/q|w|e|r|t|y|u|i|o|p|a|s|d|f|g|h|j|k|l|z|x|c|v|b|n|m/gi ,""); 	
+an=parseInt(an);
+resoult[an-1]=wordArray[i];
+
+}	
+for (var i = 0, len = resoult.length; i < len; i++) {
+if(resoult_out!=""){
+resoult_out =  resoult_out + " " + resoult[i]  ;
+}
+else{
+
+resoult_out = resoult_out  + resoult[i]  ;
+
+}
+}	
+
+
+
+return(resoult_out);
+}
+alert(order("is2 Thi1s T4est 3a"));
+
+</script>
+
+</body>
+</html>
